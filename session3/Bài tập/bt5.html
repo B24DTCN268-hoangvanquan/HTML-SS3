@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/datlich.com" method="post">
+        <label for="name"> Họ và tên :</label>
+        <input type="text"> <br>
+        <label for="datetime-local">Chọn ngày giờ :</label>
+        <input type="date"> <br>
+        <label for="service">Chọn dịch vụ :
+            <select name="service">
+                <option value="tv">Tư vấn</option>
+            </select>
+        </label>
+        <br>
+        <label for="comment">Ghi chú :</label>
+        <textarea name="comment" id="comment" rows="5"></textarea> <br>
+        <button type="submit">Đặt lịch</button>
+    </form>
+</body>
+
+</html>

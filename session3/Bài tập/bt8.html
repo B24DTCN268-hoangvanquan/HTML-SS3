@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/cccd.com">
+        <label for="name">Họ và tên :</label>
+        <input type="text" required><br><br>
+        <label for="date">Ngày sinh :</label>
+        <input type="date"><br><br>
+        <label for="gender"> Giới tính :
+            <input type="radio" name="gender" value="Man">Nam
+            <input type="radio" name="gender" value="women">Nữ
+            <br> <br>
+        </label>
+        <label for="numberCCCD">Số căn cước công dân :</label>
+        <input type="number"> <br><br>
+        <label for="ngaycap">Ngày cấp :</label>
+        <input type="date"> <br><br>
+        <label for="noicap">Nơi cấp :</label>
+        <input type="text"><br><br>
+        <label for="phone">Số điện thoại :</label>
+        <input type="number" required> <br><br>
+        <label for="email">Email :</label>
+        <input type="email" required> <br><br>
+        <label for="diachi">Địa chỉ thường trú :</label>
+        <textarea name="diachi" rows="3"></textarea>
+        <br><br>
+        <label for="diachi">Địa chỉ tạm trú :</label>
+        <textarea name="diachi" rows="3"></textarea>
+        <br><br>
+        <label for="cccdloai">Loại căn cước công dân :
+            <input type="radio" name="cccdloai" value="new">Căn cước công dân mới
+            <input type="radio" name="cccdloai" value="old">Căn cước công dân cũ
+            <br><br>
+        </label>
+        <button type="submit">Gửi thông tin</button>
+    </form>
+</body>
+
+</html>
