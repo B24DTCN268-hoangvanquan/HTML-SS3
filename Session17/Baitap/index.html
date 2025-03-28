@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        1.Khai báo lại 
+        hoisting: là việc đưa phần khai báo biến lên đầu 
+        cả 3 let, const, var đếu có hoisting 
+        Nhưng var truy cập được còn let và const đưa vòa vùng chết 
+        tạm thời không truy cập được 
+        */
+
+        //    Khai báo biên a có giá trị là 5 
+        // {
+        //     let a=5;
+        //     console.log("giá trị a:", a);
+        // }
+        // console.log("gia trị ngoài khối a:",a);
+
+        // var a = 6;
+        // console.log("giá trị a:", a);
+        let fullName = "Hoàng Văn Quân"
+        // template string
+        document.write("Tên của bạn là: "+ fullName +" <br>");
+        document.write(`Tên của bạn là : ${fullName}`);
+    </script>
+
+</body>
+
+</html>

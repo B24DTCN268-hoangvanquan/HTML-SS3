@@ -1,0 +1,22 @@
+.header {
+    background-color: rgb(195, 209, 234);
+    width: 400px;
+    height: 180px;
+}
+textarea {
+    background-color: rgb(198, 231, 230);
+    border: 1px solid black;
+}
+
+button {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 20px;
+
+}
+input {
+    background-color: rgb(204, 215, 229);
+    border: 1px solid black;
+}
+

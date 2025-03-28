@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .submit {
+            background-color: rgb(59, 59, 232);
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit:hover {
+            background-color: rgb(45, 45, 200);
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input {
+            margin-right: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DANH SÁCH NHÂN VIÊN RIKKEI</h1>
+    <form id="employeeForm">
+        <input type="text" id="employeeName" placeholder="Tên nhân viên" required />
+        <input type="text" id="employeePosition" placeholder="Chức vụ" required />
+        <button class="submit" type="submit">Thêm nhân viên</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Chức vụ</th>
+            </tr>
+        </thead>
+        <tbody id="employeeList"></tbody>
+    </table>
+    <script>
+        let employeeForm = document.getElementById("employeeForm");
+        let employeeList = document.getElementById("employeeList");
+        let employees = JSON.parse(localStorage.getItem("employees")) || [];
+        function renderEmployees() {
+            employeeList.innerHTML = "";
+            employees.forEach((employee, index) => {
+                employeeList.innerHTML += `  
+            <tr>  
+              <td>${index + 1}</td>  
+              <td>${employee.name}</td>  
+              <td>${employee.position}</td>  
+            </tr>  
+          `;
+            });
+        }
+        employeeForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            let newEmployee = {
+                name: document.getElementById("employeeName").value,
+                position: document.getElementById("employeePosition").value,
+            };
+            employees.push(newEmployee);
+            localStorage.setItem("employees", JSON.stringify(employees));
+            renderEmployees();
+            employeeForm.reset();
+        });
+        renderEmployees();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.container {
+    background-color: aqua;
+    margin: 10px;
+    color: white;
+    display: flex;
+    
+    align-items: center;
+}
+.item{
+    margin-right: 10px ;
+}

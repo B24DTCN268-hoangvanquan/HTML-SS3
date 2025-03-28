@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+}

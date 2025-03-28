@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Text</title>
+    <style>
+        .hidde {
+            /* display: none; */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+         <p class="title">This is a text</p>
+        <button class="btn_hide" onclick="handleHideText()">Hide text</button>
+        <button class="btn_show" onclick="handleShowText()">Show text</button>
+    </div>
+
+    <script>
+        let title = document.getElementsByClassName("p");
+        function handleHideText() {
+            title[0].classList.add("hide_title");
+        }
+        function handleShowText() {
+            title[0].classList.remove("hide_title");
+        }
+    </script>
+</body>
+</html>

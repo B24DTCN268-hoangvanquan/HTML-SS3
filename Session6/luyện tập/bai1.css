@@ -1,0 +1,41 @@
+.header {
+    background-color: rgb(34, 128, 216);
+    text-align: center;
+    line-height: 60px;
+    color: aliceblue;
+}
+
+.main {
+    text-align: center;
+}
+
+.footer {
+    background-color: rgba(226, 222, 222, 0.832);
+    text-align: center;
+    line-height: 50px;
+}
+
+p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    color: blue;
+}
+
+img {
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+a {
+    text-decoration: none;
+}
+.he{
+    color:aliceblue;
+}

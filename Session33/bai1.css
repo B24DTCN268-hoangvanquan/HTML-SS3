@@ -1,0 +1,14 @@
+input {
+        border: none;
+}
+
+div {
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 210px;
+}
+
+button {
+        border: none;
+        background-color: rgba(240, 248, 255, 0);
+}

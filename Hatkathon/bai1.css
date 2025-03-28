@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    margin: 5px ;
+    padding: 10px ;
+    padding-left: 40px ;
+}
+h4{
+    width: 90%;
+}
+a{
+    margin-top: 8px ;
+    text-decoration: none;
+    color: black;
+    opacity: 0.5;
+    padding-right: 20px ;
+}
+.main{
+    padding: 100px ;
+    display: flex;
+    padding-left: 120px ;
+    gap: 70px ;
+    justify-content: space-around;
+}
+.main1{
+    padding-top: 40px ;
+}
+h1{
+    font-size: 100px ;
+}
+.class{
+    display: flex;
+    padding: 100px ;
+    gap: 30px ;
+    justify-content: space-around;
+}
+.class1{
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: center;
+    gap: 100px ;
+}
+b{
+    font-size: 30px ;
+}
+.con {
+    text-align: center;
+}
+.contai1{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px ;
+    
+}
+.contai2{
+    display: flex;
+    justify-content: space-around;
+}
+.footer{
+    display: flex;
+    gap: 550px ;
+    padding-top: 50px ;
+    padding-left: 80px ;
+    padding-bottom: 50px ;
+}
+.icon{
+    display: flex;
+    gap: 10px ;
+}
+.form-control {
+    background-color: rgb(213, 215, 217);
+    padding-right: 200px ;
+}
+.fo{
+    padding-bottom: 100px ;
+}
+button{
+    color: white;
+    background-color: black;
+    padding: 10px 40px 10px 40px   ;
+}

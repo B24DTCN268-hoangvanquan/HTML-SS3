@@ -1,0 +1,91 @@
+.head {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.body1 {
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(200, 202, 203);
+}
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.body2 {
+    text-align: center;
+}
+
+.item {
+    background-color: rgb(235, 235, 244);
+    width: 150px;
+    height: 150px;
+    border-radius: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    opacity: 0.5;
+}
+
+.body2 .body2-item {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.body .body-project {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+}
+
+.project {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    opacity: 0.5;
+}
+
+.body3 {
+    padding: 10px 0px;
+    text-align: center;
+    background-color: rgb(243, 246, 248);
+
+}
+
+p {
+    color: black;
+    opacity: 0.6;
+}
+
+.foot {
+    background-color: black;
+    text-align: center;
+    padding: 3px;
+}
+
+.foot p {
+    color: white;
+    opacity: 0.2;
+}

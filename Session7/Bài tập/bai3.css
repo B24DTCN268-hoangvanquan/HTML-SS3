@@ -1,0 +1,17 @@
+h1{
+    display: inline-block;
+    vertical-align: middle;
+}
+.im{
+    vertical-align: middle;
+    width: 40px ;
+    margin-right: 5px ;
+}
+img{
+    width: 500px ;
+}
+p{
+   
+    font-size:large ;
+    opacity: 0.8  ;
+}

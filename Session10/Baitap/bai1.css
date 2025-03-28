@@ -1,0 +1,32 @@
+.contai {
+    margin: 10px;
+    background-color: rgb(186, 188, 190);
+    text-align: center;
+    margin-right: 20px;
+    justify-content: space-around;
+}
+
+h1 {
+    display: inline;
+    font-family: "Grechen Fuemen", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 70px ;
+}
+
+a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: black;
+    margin-left: 10px;
+    opacity: 0.6;
+}
+
+button {
+
+    background-color: rgb(225, 227, 230);
+    border-radius: 5px;
+    margin-left: 170px;
+    margin-bottom: 15px;
+    border: 1px solid white;
+}

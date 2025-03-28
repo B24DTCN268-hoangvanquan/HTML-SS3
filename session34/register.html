@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bai1.css">
+</head>
+
+<body>
+    <h1>Đăng ký</h1>
+    <label for="">Email :</label><br>
+    <input id="Email" type="text" placeholder="Enter your email address"> <br>
+    <label for="">Password :</label><br>
+    <input id="Password" type="text" placeholder="Enter your password"><br>
+    <label for="">Confirm Password :</label><br>
+    <input id="Confirm Password" type="text" placeholder="Enter your confirm password"> <br>
+    <button onclick="register()">Đăng kí</button>
+    <script>
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        function register() {
+            let email = document.getElementById("Email").value;
+            let password = document.getElementById("Password").value;
+            let confirmPassword = document.getElementById("Confirm Password").value;
+
+
+            let user = {
+                id: Math.floor(Math.random() * 1000),
+                email: email,
+                password: password
+
+            }
+            users.push(user);
+            localStorage.setItem("users", JSON.stringify(users));
+            window.location = "./login.html";
+        }
+
+    </script>
+</body>
+
+</html>

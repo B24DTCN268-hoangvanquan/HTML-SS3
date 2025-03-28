@@ -1,0 +1,39 @@
+.font {
+    color: rgb(219, 34, 34);
+    background-color: aliceblue;
+}
+
+.head {
+    border-style: solid;
+    border-color: green;
+    line-height: 50px;
+
+}
+
+.table {
+    background-color: rgb(225, 224, 223);
+}
+
+.button {
+    color: rgb(209, 100, 100);
+    background-color: rgb(0, 175, 0)
+}
+
+.nd {
+    border-left: 5px solid rgb(0, 177, 0);
+    background-color: aliceblue;
+    color: red;
+    padding-left: 20px ;
+
+}
+
+.fo {
+    color: rgb(33, 7, 162);
+    
+
+}
+
+.fb {
+    color: rgb(187, 109, 14);
+    padding-left: 5px ;
+}

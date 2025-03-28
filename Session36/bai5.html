@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    body {
+        background-color: rgb(246, 246, 246);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .inputBar {
+        text-align: center;
+    }
+
+    .inputBar input {
+        height: 30px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.081);
+        margin-right: 10px;
+    }
+
+    .inputBar button {
+        border: none;
+        background-color: #007BFF;
+        color: white;
+        height: 34px;
+        width: 60px;
+        border-radius: 5px;
+    }
+
+    .container {
+        display: flex;
+        width: 800px;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box {
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: white;
+        margin-right: 20px;
+        width: 220px;
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+    }
+
+    .boxEffect {
+        text-align: left;
+        background-color: #F9F9F9;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .boxEffect button {
+        border-radius: 5px;
+        border: none;
+        background-color: #28A745;
+        color: white;
+        padding: 6px;
+    }
+</style>
+
+<body>
+    <h2>Quan ly cong viec (Task Board)</h2>
+    <div class="inputBar">
+        <input type="text" placeholder="Nhap ten cong viec..." id="inputItem">
+        <button onclick="addItem()">Them</button>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h3>Cho xu ly</h3>
+            <div class="boxEffect" id="pending">
+            </div>
+        </div>
+        <div class="box">
+            <h3>Dang lam</h3>
+            <div class="boxEffect" id="working">
+            </div>
+        </div>
+        <div class="box">
+            <h3>Hoan thanh</h3>
+            <div class="boxEffect" id="done">
+            </div>
+        </div>
+    </div>
+    <script>
+        let dataName = "dataS36B5";
+        function getData() {
+            return JSON.parse(localStorage.getItem(dataName)) || [];
+        }
+
+        function addItem() {
+            let inputItem = document.getElementById("inputItem").value.trim();
+            if (inputItem) {
+                let data = getData();
+                let id;
+                if (data.length === 0) {
+                    id = 1;
+                } else {
+                    id = data[data.length - 1].id + 1;
+                }
+                let temp = {
+                    id,
+                    work: inputItem,
+                    status: 1,
+                };
+                data.push(temp);
+                localStorage[dataName] = JSON.stringify(data);
+                render();
+                alert("them thanh cong!!")
+            } else {
+                alert("Co gi do da sai!!");
+            }
+            document.getElementById("inputItem").value = "";
+        }
+        function render() {
+            let pendingMess = "";
+            let workingMess = "";
+            let doneMess = "";
+            let data = getData();
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].status === 3) {
+                    doneMess += `<p>${data[i].work}</p>`;
+                } else if (data[i].status === 2) {
+                    workingMess += `
+            <p>${data[i].work}</p>
+            <button onclick="nextStatus(${data[i].id})">Chuyen tiep</button>
+            `;
+                } else {
+                    pendingMess += `
+            <p>${data[i].work}</p>
+            <button onclick="nextStatus(${data[i].id})">Chuyen tiep</button>
+            `;
+                }
+            }
+            document.getElementById("pending").innerHTML = pendingMess;
+            document.getElementById("working").innerHTML = workingMess;
+            document.getElementById("done").innerHTML = doneMess;
+        }
+
+        function nextStatus(id) {
+            let data = getData();
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].id === id) {
+                    data[i].status++;
+                    localStorage[dataName] = JSON.stringify(data);
+                    render();
+                    return;
+                }
+            }
+        }
+
+        render();
+    </script>
+</body>
+
+</html>

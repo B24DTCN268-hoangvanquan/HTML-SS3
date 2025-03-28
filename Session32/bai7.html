@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phóng to ảnh khi click</title>
+    <link rel="stylesheet" href="bai7.css">
+</head>
+
+<body>
+
+    <h2>Click vào ảnh để phóng to</h2>
+    <img src="https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/hinh-thien-nhien-3d-002.jpg" alt="Ảnh nhỏ"
+        onclick="openImage(this)">
+
+    <div id="overlay" onclick="closeImage()">
+        <img id="overlay-img">
+    </div>
+
+    <script src="bai7.js"></script>
+
+</body>
+
+</html>

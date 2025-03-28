@@ -1,0 +1,26 @@
+.container {
+    width: 424px;
+    height: 100px;
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    justify-content:space-around;
+    align-items: center;
+    
+
+}
+
+.item {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(49, 245, 98);
+    margin: 2px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 5px ;
+   
+}
+.it1{
+    margin-top: -8px ;
+}

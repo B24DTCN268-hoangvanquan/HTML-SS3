@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="items">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        // mảng có 13 phần tử
+        let itemPage=4;
+        let pages=Math.ceil(numbers.length/itemPage); // ra sô trang
+        function showItem(){
+            let str="";
+            for(let i=0;i<numbers.length;i++){
+                   str+=`<li>${numbers[i]}<li>`
+            }
+        }
+
+    </script>
+</body>
+
+</html>

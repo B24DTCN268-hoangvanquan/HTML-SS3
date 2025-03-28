@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #list {
+            background-color: rgb(255, 255, 255);
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .item {
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            height: 150px;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.491);
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            height: 120px;
+            width: 150px;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #28A745;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            height: 30px;
+            width: 80px;
+        }
+
+        .fixBox {
+            height: 120px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ban thich mon nao nhat?</h1>
+    <div id="list">
+
+    </div>
+    <script>
+        let dataName = "dataS36B2";
+        let menu = [
+            {
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqulIeguTKWJKOXqP5JfXxJ2wfCRdD6ojRPg&s",
+                name: "Bun bo hue",
+                like: 0,
+            },
+            {
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqulIeguTKWJKOXqP5JfXxJ2wfCRdD6ojRPg&s",
+                name: "Pho bo Ha Noi",
+                like: 0,
+            },
+            {
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqulIeguTKWJKOXqP5JfXxJ2wfCRdD6ojRPg&s",
+                name: "Com tam Sai Gon",
+                like: 0,
+            },
+        ];
+
+        function getData() {
+            return JSON.parse(localStorage.getItem(dataName)) || menu;
+        }
+
+        function render() {
+            let message = ``;
+            let data = getData();
+            for (let i = 0; i < data.length; i++) {
+                message += `
+            <div class="item">
+                <img src="${data[i].img}" alt="">
+                <div class="fixBox">
+                    <h3>${data[i].name}</h3>
+                    <p>${data[i].like} luot thich</p>
+                    <button onclick="like(${i})">Thich +1</button>
+                </div>
+            </div>
+        `;
+            }
+            document.getElementById("list").innerHTML = message;
+        }
+        function like(id) {
+            let data = getData();
+            data[id].like += 1;
+            localStorage[dataName] = JSON.stringify(data);
+            render();
+        }
+
+        render();
+    </script>
+</body>
+
+</html>
