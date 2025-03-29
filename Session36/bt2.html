@@ -2,71 +2,82 @@
 <html lang="vi">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0f66db;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 10px;
+            color: #1877f2;
+            text-decoration: none;
+        }
+    </style>
 </head>
-<style>
-    .container {
-        text-align: center;
-    }
-
-    .main {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        padding-top: 20px;
-    }
-
-    button {
-        padding: 20px;
-        border-radius: 5px;
-        border: 1px solid white;
-        cursor: pointer;
-    }
-
-    .do {
-        background-color: red;
-        color: white;
-    }
-
-    .xanh {
-        background-color: rgb(115, 115, 246);
-        color: white;
-    }
-
-    .vang {
-        background-color: rgb(243, 243, 20);
-    }
-
-    .tim {
-        background-color: rgb(175, 104, 241);
-        color: white;
-    }
-</style>
 
 <body>
     <div class="container">
-        <h1>Chọn màu nền bạn yêu thích</h1>
-        <div class="main">
-            <button class="do" onclick="chọnMàu('red')">Đỏ</button>
-            <button class="xanh" onclick="chọnMàu('blue')">Xanh</button>
-            <button class="vang" onclick="chọnMàu('yellow')">Vàng</button>
-            <button class="tim" onclick="chọnMàu('purple')">Tím</button>
-        </div>
+        <h2>Đăng ký</h2>
+        <input type="text" id="username" placeholder="Tên đăng nhập">
+        <input type="password" id="password" placeholder="Mật khẩu">
+        <button onclick="register()">Đăng ký</button>
+        <a href="#" class="back-link">Quay lại đăng nhập</a>
     </div>
-    <script>
-        function chọnMàu(màu) {
-            document.body.style.backgroundColor = màu;
-            localStorage.setItem('màuNền', màu);
-        }
-        window.onload = function () {
-            let màuNền = localStorage.getItem('màuNền');
-            if (màuNền) {
-                document.body.style.backgroundColor = màuNền;
-            }
-        };
 
+    <script>
+        function register() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if (username && password) {
+                alert("Đăng ký thành công!");
+            } else {
+                alert("Vui lòng nhập đầy đủ thông tin.");
+            }
+        }
     </script>
 </body>
 
